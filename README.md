@@ -1,12 +1,12 @@
 # 3dGameProject
-Final Project of NCCUCS 10513dGame 
+NCCUCS 10513D遊戲設計期末專案
 
 # Coding Style
 採用[UpperCamelCase](https://zh.wikipedia.org/wiki/駝峰式大小寫)  
-變數不要亂命名
+變數不要亂命名  
 
-# Something Else
-Prefab、Scripts等等請分類放進對應資料夾  
+#推薦Git Tool#
+[SourceTree](https://www.sourcetreeapp.com)  
 
 #Tutorial
 不會使用Git的話可以參考  
@@ -14,8 +14,7 @@ Prefab、Scripts等等請分類放進對應資料夾
 [連少維都能懂的git入門指南](https://backlogtool.com/git-guide/tw/)  
 [git教學](https://www.gitbook.com/book/kingofamani/git-teach/details)  
 
-#參考流程#
-	
+#參考流程
 以下直接是寫執行命令，如果是用其它工具的人，UI上應該會有對應的功能。  
 如果怕會把git搞爛，就參考以下的流程，Fork回去，再Pull Request上來，至少我可以審過(?)，確定OK的話可以跟我說，我在把權限開給你  
 
@@ -30,13 +29,11 @@ Prefab、Scripts等等請分類放進對應資料夾
 以上為初始化流程，如果 upstream 有更新請執行 5~7 即可，平時請在自己的分支上作業。  
 最後發 pull-request 將更新內容加回至本專案，每次發之前請務必確認是否同步了最新版。  
 
-#推薦Git Tool#
-[SourceTree](https://www.sourcetreeapp.com)  
-
-#其他#
+#小提醒
+* Prefab、Scripts等等請分類放進對應資料夾  
+* Code 註解記得要寫，請養成好習慣  
 * Commit內容不要亂寫，中文或英文都可以，就把你做的事情備註上去  
 * 沒有必要做了點小更動就Commit，大概一小個段落一小個段落再Commit這樣  
-*  如果Local跟Remote有動到同個檔案時會有Coflict的問題，到時候再來解吧，我也不一定會A_A  
+* 如果Local跟Remote有動到同個檔案時會有Coflict的問題，到時候再來解吧，我也不一定會A_A  
 * 建議是開始編輯前先檢查一下Remote有沒有Upadate  
-
- 我也是第一次管Git project所以可能也會有問題XD有其他問題再說吧  
+* Issues那邊有開一個Todo List  
