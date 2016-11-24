@@ -8,20 +8,20 @@ public class MoveToolMan : MonoBehaviour {
 	
 	// Update is called once per frame
 	//壓著按鍵可連續移動
-	//移動速度先設0.1，以後需要再調整
+	//移動速度未定 就先用1.0f吧/(>.O)/
 	void Update () {
-/*		print (this.transform.rotation.eulerAngles);
-		if (Input.GetKey (KeyCode.W)) {	//按住W鍵往前(z軸正軸)移動
-			this.transform.Translate (new Vector3(Mathf.Sin(this.transform.eulerAngles.y),0,Mathf.Cos(this.transform.eulerAngles.y))
-				*Time.deltaTime*Speed);
-		} else if (Input.GetKey (KeyCode.S)) {	//按住S鍵往後(z軸負軸)移動
-			this.transform.Translate (new Vector3(-Mathf.Sin(this.transform.eulerAngles.y),0,-Mathf.Cos(this.transform.eulerAngles.y))
-				*Time.deltaTime*Speed);
-		} else if (Input.GetKey (KeyCode.A)) {	//按住A鍵往左(x軸負軸)移動
-			this.transform.Translate (-Vector3.left*Time.deltaTime*Speed,Space.Self);
-		} else if (Input.GetKey (KeyCode.D)) {	//按住D鍵往右(x軸正軸)移動
-			this.transform.Translate (Vector3.right*Time.deltaTime*Speed,Space.Self);
-		}*/
-
+		//print (this.transform.rotation.eulerAngles);
+		if (Input.GetKey (KeyCode.W)) {
+			this.transform.Translate (new Vector3 (0,0,1.0f)*Time.deltaTime, Space.Self);
+		}
+		if (Input.GetKey (KeyCode.S)) {
+			this.transform.Translate (new Vector3(0,0,-1.0f)*Time.deltaTime, Space.Self);
+		}
+		if (Input.GetKey (KeyCode.A)) {
+			this.transform.Translate (new Vector3(-1.0f,0,0)*Time.deltaTime, Space.Self);
+		}
+		if (Input.GetKey (KeyCode.D)) {
+			this.transform.Translate (new Vector3 (1.0f,0,0)*Time.deltaTime, Space.Self);
+		}
 	}
 }
