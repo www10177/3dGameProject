@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class MoveToolMan : MonoBehaviour {
+    /*Parameter*/
+    float Speed = 3.0f;
 	// Use this for initialization
 	void Start () {
 	}
@@ -12,16 +14,16 @@ public class MoveToolMan : MonoBehaviour {
 	void Update () {
 		//print (this.transform.rotation.eulerAngles);
 		if (Input.GetKey (KeyCode.W)) {
-			this.transform.Translate (new Vector3 (0,0,1.0f)*Time.deltaTime, Space.Self);
+			this.transform.Translate (new Vector3 (0,0, Speed) *Time.deltaTime, Space.Self);
 		}
 		if (Input.GetKey (KeyCode.S)) {
-			this.transform.Translate (new Vector3(0,0,-1.0f)*Time.deltaTime, Space.Self);
+			this.transform.Translate (new Vector3(0,0,-1*Speed) *Time.deltaTime, Space.Self);
 		}
 		if (Input.GetKey (KeyCode.A)) {
-			this.transform.Translate (new Vector3(-1.0f,0,0)*Time.deltaTime, Space.Self);
+			this.transform.Translate (new Vector3(-1*Speed, 0,0)*Time.deltaTime, Space.Self);
 		}
 		if (Input.GetKey (KeyCode.D)) {
-			this.transform.Translate (new Vector3 (1.0f,0,0)*Time.deltaTime, Space.Self);
+			this.transform.Translate (new Vector3 (Speed, 0,0)*Time.deltaTime, Space.Self);
 		}
 	}
 }

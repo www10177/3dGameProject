@@ -2,17 +2,30 @@
 using System.Collections;
 
 public class SpawnCars : MonoBehaviour {
-    float CarRangeZ=25.71f/2; // Range of spawn cars
-    float CarOffsetY = 1.28f;//Distanve between car center and the plane
-    int CarDestiny = 60;// Every "CarDestiny" frame will spawn one car
+    /*Parameters*/
+    int[] TimeRange = new int[]{ 60, 100 };
+
+/*Global Variables*/
+float CarOffsetY;//Distanve between car center and the plane
+    int CarSpawnTime ;// Every "CarSpawnTime" frame will spawn one car
+	Vector3 CarSize;
     public GameObject Cars;
+
 	// Use this for initialization
 	void Start () {
+		CarSize =Cars.transform.Find("Body").GetComponent<Renderer>().bounds.size;
+       // print ("Car Size: " + CarSize);
+        CarOffsetY = -1 * CarSize.y / 2 + 2.5f;/*Should Fixed: Manual Fix Offset*/
+        /*Set CarDestiny Seed*/
+        CarSpawnTime = Random.Range(TimeRange[0], TimeRange[1]);
     }
-	
-	// Update is called once per frame
-	void Update () {
-        if (Time.frameCount % CarDestiny == 1) 
-            Instantiate(Cars, transform.position + new Vector3(0, CarOffsetY, Random.Range((int)(-1 * CarRangeZ), (int)CarRangeZ)), transform.rotation);
+
+    // Update is called once per frame
+    void Update() {
+        if (Time.frameCount % CarSpawnTime == 1) {
+        //Instantiate(Cars, transform.position + new Vector3(0, CarOffsetY, Random.Range((int)(-1 * RoadSize.z / 2), (int)RoadSize.z / 2)), transform.rotation);// Random Version
+            Instantiate(Cars, transform.position + new Vector3(0, CarOffsetY,  0), transform.rotation);
+            print("position" +transform.position);
+        }
     }
 }
