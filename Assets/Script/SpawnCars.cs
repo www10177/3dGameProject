@@ -25,7 +25,7 @@ float CarOffsetY;//Distanve between car center and the plane
         if (Time.frameCount % CarSpawnTime == 1) {
         //Instantiate(Cars, transform.position + new Vector3(0, CarOffsetY, Random.Range((int)(-1 * RoadSize.z / 2), (int)RoadSize.z / 2)), transform.rotation);// Random Version
             Instantiate(Cars, transform.position + new Vector3(0, CarOffsetY,  0), transform.rotation);
-            print("position" +transform.position);
+            //print("position" +transform.position);
         }
     }
 }
