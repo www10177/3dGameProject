@@ -6,7 +6,7 @@ using System.Collections;
 //輸出成可執行檔之後應該就可以正常quit遊戲
 //從網路上幹來的codeㄏㄏ
 //大家可以再討論要不要用
-public class QuitGame : MonoBehaviour
+public class EscAndQuitGame : MonoBehaviour
 {
 	// public
 	public int windowWidth = 400;
