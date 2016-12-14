@@ -19,5 +19,6 @@ public class CameraFollow : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		this.transform.Rotate(new Vector3 (-1*Input.GetAxis ("Mouse Y"), 0, 0) * SpeedVer, Space.Self);
-	}
+        this.transform.Rotate(new Vector3(0,    1 * Input.GetAxis("Mouse X"), 0) * SpeedVer, Space.Self);
+    }
 }

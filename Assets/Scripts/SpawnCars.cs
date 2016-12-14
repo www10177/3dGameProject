@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SpawnCars : MonoBehaviour {
     /*Parameters*/
-    int[] TimeRange = new int[]{ 60, 100 };
+    int[] TimeRange = new int[]{ 150, 230 };
 
 /*Global Variables*/
 float CarOffsetY;//Distanve between car center and the plane
