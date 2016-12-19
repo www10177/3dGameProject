@@ -1,0 +1,313 @@
+fileFormatVersion: 2
+guid: ab1b291e257e7b54fadaeca3c6344bab
+timeCreated: 1482162648
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: group
+    100004: group1
+    100006: group2
+    100008: group3
+    100010: group4
+    100012: group5
+    100014: group6
+    100016: group7
+    100018: pasted__group
+    100020: pasted__group4
+    100022: pasted__group6
+    100024: pasted__pasted__pCylinder3
+    100026: pasted__pasted__pCylinder4
+    100028: pasted__pasted__pCylinder5
+    100030: pasted__pCylinder3
+    100032: pasted__pCylinder3 1
+    100034: pasted__pCylinder4
+    100036: pasted__pCylinder4 1
+    100038: pasted__pCylinder5
+    100040: pCube1
+    100042: pCube2
+    100044: pCube3
+    100046: pCylinder1
+    100048: pCylinder2
+    100050: pCylinder3
+    100052: pCylinder4
+    100054: TEMPORARY_IMPORT_NAMESPACE____l_1:group
+    100056: TEMPORARY_IMPORT_NAMESPACE____l_1:group1
+    100058: TEMPORARY_IMPORT_NAMESPACE____l_1:group10
+    100060: TEMPORARY_IMPORT_NAMESPACE____l_1:group11
+    100062: TEMPORARY_IMPORT_NAMESPACE____l_1:group12
+    100064: TEMPORARY_IMPORT_NAMESPACE____l_1:group2
+    100066: TEMPORARY_IMPORT_NAMESPACE____l_1:group3
+    100068: TEMPORARY_IMPORT_NAMESPACE____l_1:group4
+    100070: TEMPORARY_IMPORT_NAMESPACE____l_1:group5
+    100072: TEMPORARY_IMPORT_NAMESPACE____l_1:group6
+    100074: TEMPORARY_IMPORT_NAMESPACE____l_1:group7
+    100076: TEMPORARY_IMPORT_NAMESPACE____l_1:group8
+    100078: TEMPORARY_IMPORT_NAMESPACE____l_1:group9
+    100080: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__group1
+    100082: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__group1 1
+    100084: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__group8
+    100086: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__group8 1
+    100088: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__group9
+    100090: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__group
+    100092: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__group8
+    100094: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__pasted__pCylinder1
+    100096: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__pasted__pCylinder3
+    100098: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__pasted__pCylinder4
+    100100: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__pasted__transform1
+    100102: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__pasted__transform2
+    100104: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__pCylinder1
+    100106: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__pCylinder1 1
+    100108: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__pCylinder3
+    100110: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__pCylinder3 1
+    100112: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__pCylinder4
+    100114: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__pCylinder4 1
+    100116: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__transform1
+    100118: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__transform1 1
+    100120: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__transform2
+    100122: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__transform2 1
+    100124: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pCube3
+    100126: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pCube3 1
+    100128: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pCylinder1
+    100130: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pCylinder1 1
+    100132: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pCylinder1 2
+    100134: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pCylinder2
+    100136: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pCylinder3
+    100138: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pCylinder3 1
+    100140: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pCylinder3 2
+    100142: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__transform1
+    100144: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__transform1 1
+    100146: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__transform1 2
+    100148: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__transform2
+    100150: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__transform2 1
+    100152: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__transform2 2
+    100154: TEMPORARY_IMPORT_NAMESPACE____l_1:pCube1
+    100156: TEMPORARY_IMPORT_NAMESPACE____l_1:pCube2
+    100158: TEMPORARY_IMPORT_NAMESPACE____l_1:pCube3
+    100160: TEMPORARY_IMPORT_NAMESPACE____l_1:pCube4
+    100162: TEMPORARY_IMPORT_NAMESPACE____l_1:pCube5
+    100164: TEMPORARY_IMPORT_NAMESPACE____l_1:pCube6
+    100166: TEMPORARY_IMPORT_NAMESPACE____l_1:pCube7
+    100168: TEMPORARY_IMPORT_NAMESPACE____l_1:pCylinder1
+    100170: TEMPORARY_IMPORT_NAMESPACE____l_1:pCylinder2
+    100172: TEMPORARY_IMPORT_NAMESPACE____l_1:pCylinder3
+    100174: TEMPORARY_IMPORT_NAMESPACE____l_1:pCylinder4
+    100176: TEMPORARY_IMPORT_NAMESPACE____l_1:transform1
+    100178: TEMPORARY_IMPORT_NAMESPACE____l_1:transform10
+    100180: TEMPORARY_IMPORT_NAMESPACE____l_1:transform11
+    100182: TEMPORARY_IMPORT_NAMESPACE____l_1:transform12
+    100184: TEMPORARY_IMPORT_NAMESPACE____l_1:transform13
+    100186: TEMPORARY_IMPORT_NAMESPACE____l_1:transform14
+    100188: TEMPORARY_IMPORT_NAMESPACE____l_1:transform15
+    100190: TEMPORARY_IMPORT_NAMESPACE____l_1:transform16
+    100192: TEMPORARY_IMPORT_NAMESPACE____l_1:transform17
+    100194: TEMPORARY_IMPORT_NAMESPACE____l_1:transform2
+    100196: TEMPORARY_IMPORT_NAMESPACE____l_1:transform3
+    100198: TEMPORARY_IMPORT_NAMESPACE____l_1:transform4
+    100200: TEMPORARY_IMPORT_NAMESPACE____l_1:transform5
+    100202: TEMPORARY_IMPORT_NAMESPACE____l_1:transform6
+    100204: TEMPORARY_IMPORT_NAMESPACE____l_1:transform7
+    100206: TEMPORARY_IMPORT_NAMESPACE____l_1:transform8
+    100208: TEMPORARY_IMPORT_NAMESPACE____l_1:transform9
+    100210: transform1
+    100212: transform10
+    100214: transform11
+    100216: transform12
+    100218: transform13
+    100220: transform14
+    100222: transform2
+    100224: transform3
+    100226: transform4
+    100228: transform5
+    100230: transform6
+    100232: transform7
+    100234: transform8
+    100236: transform9
+    400000: //RootNode
+    400002: group
+    400004: group1
+    400006: group2
+    400008: group3
+    400010: group4
+    400012: group5
+    400014: group6
+    400016: group7
+    400018: pasted__group
+    400020: pasted__group4
+    400022: pasted__group6
+    400024: pasted__pasted__pCylinder3
+    400026: pasted__pasted__pCylinder4
+    400028: pasted__pasted__pCylinder5
+    400030: pasted__pCylinder3
+    400032: pasted__pCylinder3 1
+    400034: pasted__pCylinder4
+    400036: pasted__pCylinder4 1
+    400038: pasted__pCylinder5
+    400040: pCube1
+    400042: pCube2
+    400044: pCube3
+    400046: pCylinder1
+    400048: pCylinder2
+    400050: pCylinder3
+    400052: pCylinder4
+    400054: TEMPORARY_IMPORT_NAMESPACE____l_1:group
+    400056: TEMPORARY_IMPORT_NAMESPACE____l_1:group1
+    400058: TEMPORARY_IMPORT_NAMESPACE____l_1:group10
+    400060: TEMPORARY_IMPORT_NAMESPACE____l_1:group11
+    400062: TEMPORARY_IMPORT_NAMESPACE____l_1:group12
+    400064: TEMPORARY_IMPORT_NAMESPACE____l_1:group2
+    400066: TEMPORARY_IMPORT_NAMESPACE____l_1:group3
+    400068: TEMPORARY_IMPORT_NAMESPACE____l_1:group4
+    400070: TEMPORARY_IMPORT_NAMESPACE____l_1:group5
+    400072: TEMPORARY_IMPORT_NAMESPACE____l_1:group6
+    400074: TEMPORARY_IMPORT_NAMESPACE____l_1:group7
+    400076: TEMPORARY_IMPORT_NAMESPACE____l_1:group8
+    400078: TEMPORARY_IMPORT_NAMESPACE____l_1:group9
+    400080: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__group1
+    400082: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__group1 1
+    400084: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__group8
+    400086: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__group8 1
+    400088: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__group9
+    400090: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__group
+    400092: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__group8
+    400094: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__pasted__pCylinder1
+    400096: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__pasted__pCylinder3
+    400098: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__pasted__pCylinder4
+    400100: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__pasted__transform1
+    400102: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__pasted__transform2
+    400104: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__pCylinder1
+    400106: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__pCylinder1 1
+    400108: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__pCylinder3
+    400110: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__pCylinder3 1
+    400112: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__pCylinder4
+    400114: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__pCylinder4 1
+    400116: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__transform1
+    400118: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__transform1 1
+    400120: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__transform2
+    400122: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pasted__transform2 1
+    400124: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pCube3
+    400126: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pCube3 1
+    400128: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pCylinder1
+    400130: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pCylinder1 1
+    400132: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pCylinder1 2
+    400134: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pCylinder2
+    400136: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pCylinder3
+    400138: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pCylinder3 1
+    400140: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__pCylinder3 2
+    400142: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__transform1
+    400144: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__transform1 1
+    400146: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__transform1 2
+    400148: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__transform2
+    400150: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__transform2 1
+    400152: TEMPORARY_IMPORT_NAMESPACE____l_1:pasted__transform2 2
+    400154: TEMPORARY_IMPORT_NAMESPACE____l_1:pCube1
+    400156: TEMPORARY_IMPORT_NAMESPACE____l_1:pCube2
+    400158: TEMPORARY_IMPORT_NAMESPACE____l_1:pCube3
+    400160: TEMPORARY_IMPORT_NAMESPACE____l_1:pCube4
+    400162: TEMPORARY_IMPORT_NAMESPACE____l_1:pCube5
+    400164: TEMPORARY_IMPORT_NAMESPACE____l_1:pCube6
+    400166: TEMPORARY_IMPORT_NAMESPACE____l_1:pCube7
+    400168: TEMPORARY_IMPORT_NAMESPACE____l_1:pCylinder1
+    400170: TEMPORARY_IMPORT_NAMESPACE____l_1:pCylinder2
+    400172: TEMPORARY_IMPORT_NAMESPACE____l_1:pCylinder3
+    400174: TEMPORARY_IMPORT_NAMESPACE____l_1:pCylinder4
+    400176: TEMPORARY_IMPORT_NAMESPACE____l_1:transform1
+    400178: TEMPORARY_IMPORT_NAMESPACE____l_1:transform10
+    400180: TEMPORARY_IMPORT_NAMESPACE____l_1:transform11
+    400182: TEMPORARY_IMPORT_NAMESPACE____l_1:transform12
+    400184: TEMPORARY_IMPORT_NAMESPACE____l_1:transform13
+    400186: TEMPORARY_IMPORT_NAMESPACE____l_1:transform14
+    400188: TEMPORARY_IMPORT_NAMESPACE____l_1:transform15
+    400190: TEMPORARY_IMPORT_NAMESPACE____l_1:transform16
+    400192: TEMPORARY_IMPORT_NAMESPACE____l_1:transform17
+    400194: TEMPORARY_IMPORT_NAMESPACE____l_1:transform2
+    400196: TEMPORARY_IMPORT_NAMESPACE____l_1:transform3
+    400198: TEMPORARY_IMPORT_NAMESPACE____l_1:transform4
+    400200: TEMPORARY_IMPORT_NAMESPACE____l_1:transform5
+    400202: TEMPORARY_IMPORT_NAMESPACE____l_1:transform6
+    400204: TEMPORARY_IMPORT_NAMESPACE____l_1:transform7
+    400206: TEMPORARY_IMPORT_NAMESPACE____l_1:transform8
+    400208: TEMPORARY_IMPORT_NAMESPACE____l_1:transform9
+    400210: transform1
+    400212: transform10
+    400214: transform11
+    400216: transform12
+    400218: transform13
+    400220: transform14
+    400222: transform2
+    400224: transform3
+    400226: transform4
+    400228: transform5
+    400230: transform6
+    400232: transform7
+    400234: transform8
+    400236: transform9
+    2300000: pCube3
+    3300000: pCube3
+    4300000: pCube3
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 2
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

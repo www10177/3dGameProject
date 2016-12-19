@@ -2,30 +2,26 @@
 using System.Collections;
 
 public class CameraFollow : MonoBehaviour {
-	public float MouseXSensitivity = 100f; //垂直旋轉(上下轉頭、眼)的速度
-	public float CameraHeight;	//攝影機固定在人物上方10m
-	public float CameraDistance;	//攝影機固定在離人物背後水平10m遠
-	public float CameraHorizontalOffset; //攝影機距離肩膀水平距離
+	public float MouseXSensitivity = 10f; //垂直旋轉(上下轉頭、眼)的速度
+	public float CameraYOffset = 2 ;	//Camera Y-Axis offset
+	public float CameraDistance = 2;	//繞LookAtHere半徑
 	private Transform ToolMan;
 	private Transform MainCamera;
+    private Vector3 offset;
 	// Use this for initialization
 	void Start () {
 		ToolMan = GameObject.FindWithTag ("Player").transform;
-		Debug.Log (ToolMan);
 		MainCamera = Camera.main.transform;
-       //固定camera跟人之間的相對位置
+        offset = new Vector3(0, CameraYOffset, CameraDistance);
+        Debug.Log("Start: " + offset);
     }
 	
 	// Update is called once per frame
-	void Update () {
-        //this.transform.Rotate(new Vector3 (-1*Input.GetAxis ("Mouse Y"), 0, 0) * SpeedVer, Space.Self);
-
-
-        MainCamera.position = new Vector3(ToolMan.position.x + CameraHorizontalOffset, ToolMan.position.y + CameraHeight, ToolMan.position.z - CameraDistance);
-	//	MainCamera.LookAt (ToolMan.Find("LookAtHere"));
-		float RotateAngle = Mathf.Clamp (MouseXSensitivity * Input.GetAxis ("Mouse X") * Time.deltaTime, -60, 60);
-	//	ToolMan.Rotate (Vector3.up, RotateAngle);
-		MainCamera.Rotate (Vector3.up, RotateAngle);
+	void LateUpdate () {
+       offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * MouseXSensitivity, Vector3.up) * offset;
+        Debug.Log("After: " + offset);
+        MainCamera.position = ToolMan.position + offset;
+        MainCamera.LookAt(ToolMan.Find("LookAtHere"));
 
     }
 }

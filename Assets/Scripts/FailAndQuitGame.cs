@@ -59,8 +59,14 @@ public class FailAndQuitGame : MonoBehaviour
 		}
 		if (GUI.Button (new Rect (80, 70, 100, 20), "Quit")) {
 			Application.Quit ();
+			Time.timeScale = 1;
 		}
-		if (GUI.Button (new Rect (200, 70, 100, 20), "help QQ")) {
+		if (GUI.Button (new Rect (220, 70, 100, 20), "Restart")) {
+			Application.LoadLevel ("MainScene");
+			Time.timeScale = 1;
+		} 
+		if (GUI.Button (new Rect (220, 90, 100, 20), "help QQ")) {
+			Time.timeScale = 1;
 			if (NowQQCount < MaxQQCount) {
 				NowQQCount++; 
 			}
