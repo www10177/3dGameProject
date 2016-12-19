@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class MoveCar : MonoBehaviour {
-    public float Speed = 20f;
+    public float Speed = 10f;
     float MaximumDistance ; // Max Distance the Car Can Move ( == the Length of the Road ) 
     float OriginalX; //Original point( == CarSpawner)
 	private GameObject CarSpawner ;

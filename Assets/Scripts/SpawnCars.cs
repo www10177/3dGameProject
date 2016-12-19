@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SpawnCars : MonoBehaviour {
     /*Parameters*/
-    private int[] TimeRange =  { 50,100 };
+    private int[] TimeRange =  { 100,150 };
     public int CarCount = 3;
 
 /*Global Variables*/
