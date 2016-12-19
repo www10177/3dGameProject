@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class CameraFollow : MonoBehaviour {
-	public float MouseXSensitivity = 60f; //垂直旋轉(上下轉頭、眼)的速度
+	public float MouseXSensitivity = 100f; //垂直旋轉(上下轉頭、眼)的速度
 	public float CameraHeight;	//攝影機固定在人物上方10m
 	public float CameraDistance;	//攝影機固定在離人物背後水平10m遠
 	public float CameraHorizontalOffset; //攝影機距離肩膀水平距離
@@ -10,7 +10,8 @@ public class CameraFollow : MonoBehaviour {
 	private Transform MainCamera;
 	// Use this for initialization
 	void Start () {
-		ToolMan = GameObject.Find ("ToolMan").transform;
+		ToolMan = GameObject.FindWithTag ("Player").transform;
+		Debug.Log (ToolMan);
 		MainCamera = Camera.main.transform;
        //固定camera跟人之間的相對位置
     }
