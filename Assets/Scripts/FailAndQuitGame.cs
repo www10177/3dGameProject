@@ -70,7 +70,6 @@ public class FailAndQuitGame : MonoBehaviour
 			if (NowQQCount < MaxQQCount) {
 				NowQQCount++; 
 			}
-			else Application.Quit ();
 		}
 		GUI.DragWindow (); 
 	}
