@@ -14,15 +14,17 @@ public class SpawnCars : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        MaximumDistance = this.transform.parent.GetComponent<Renderer>().bounds.size.x;
+        Vector3 Size = transform.parent.GetComponent<Renderer>().bounds.size;
+        MaximumDistance = Mathf.Max(Size.x, Size.z);
+
         /*Set CarDestiny Seed*/
         CarSpawnTime = Random.Range(TimeRange[0], TimeRange[1]);
         Cars = new GameObject[CarCount];
         for (int i = 0; i < CarCount; i++)
         {
-            Cars[i] = Resources.Load("Cars/Car" + (i + 1)) as GameObject;
-
+            Cars[i] = Resources.Load("Cars/Car" + (i + 1)) as GameObject;   
         }
+       
     }
 
     // Update is called once per frame
@@ -31,7 +33,7 @@ public class SpawnCars : MonoBehaviour {
 		
         if (Time.frameCount % CarSpawnTime == 1)
         {
-			CreateCar ();	
+            CreateCar();
         }
     }
 	void  CreateCar()

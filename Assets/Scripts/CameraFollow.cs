@@ -13,13 +13,13 @@ public class CameraFollow : MonoBehaviour {
 		ToolMan = GameObject.FindWithTag ("Player").transform;
 		MainCamera = Camera.main.transform;
         offset = new Vector3(0, CameraYOffset, CameraDistance);
-        Debug.Log("Start: " + offset);
+     //   Debug.Log("Start: " + offset);
     }
 	
 	// Update is called once per frame
 	void LateUpdate () {
        offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * MouseXSensitivity, Vector3.up) * offset;
-        Debug.Log("After: " + offset);
+       // Debug.Log("After: " + offset);
         MainCamera.position = ToolMan.position + offset;
         MainCamera.LookAt(ToolMan.Find("LookAtHere"));
 

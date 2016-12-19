@@ -4,20 +4,21 @@ using System.Collections;
 public class MoveCar : MonoBehaviour {
     public float Speed = 10f;
     float MaximumDistance ; // Max Distance the Car Can Move ( == the Length of the Road ) 
-    float OriginalX; //Original point( == CarSpawner)
+    Vector3 Original; //Original point( == CarSpawner)
 	private GameObject CarSpawner ;
 	// Use this for initialization
 	void Start () {
 		CarSpawner = transform.parent.gameObject;
-		OriginalX = CarSpawner.transform.position.x;
+		Original = CarSpawner.transform.position;
 		MaximumDistance = CarSpawner.GetComponent<SpawnCars>().MaximumDistance;
-
 	}
 	
 	// Update is called once per frame
 	void Update () {
         transform.Translate(new Vector3(Speed*Time.deltaTime, 0, 0));
-		float MoveDis = Mathf.Abs(transform.position.x - OriginalX);//the distance car moved
+		float MoveDis = Vector3.Distance(Original, transform.position);//the distance car moved
+     //   Debug.Log("Position: " + transform.position.x);
+      //  Debug.Log("Distance : " + MoveDis + " Max : " + MaximumDistance);
 		if (MoveDis >= MaximumDistance  )
 			Destroy(this.gameObject);
 
