@@ -38,7 +38,7 @@ public class CompleteAndQuitGame : MonoBehaviour
 	void OnTriggerEnter(Collider other) 
 	{
 		print ("trigger on "+other.gameObject.name);
-		if (other.gameObject.name == "Goal") {	
+		if (other.gameObject.name == "EndBuilding") {	
 			Time.timeScale = 0;
 			windowSwitch = 1;
 			alpha = 0;

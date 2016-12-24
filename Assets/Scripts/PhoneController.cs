@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PhoneController : MonoBehaviour {
 	public Canvas CanvasObject;
-	bool PhoneObtained=false;
+	public static bool PhoneObtained=false;
 	void Start () {
 		CanvasObject.GetComponent<Canvas> ().enabled = false;
 	}

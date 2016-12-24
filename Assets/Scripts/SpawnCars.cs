@@ -10,7 +10,7 @@ public class SpawnCars : MonoBehaviour {
 
     int CarSpawnTime ;// Every "CarSpawnTime" frame will spawn one car
 	public GameObject[] Cars;
-     public float MaximumDistance; // Maximum Distance that car spawned can move
+    public float MaximumDistance; // Maximum Distance that car spawned can move
 
 	// Use this for initialization
 	void Start () {
