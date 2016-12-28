@@ -21,7 +21,7 @@ public class PhoneUIController : MonoBehaviour {
 			}
 		}
 
-		MoneyText.text = ConditionController.Money.ToString();
-		ScoreText.text = ConditionController.Score.ToString();
+		//MoneyText.text = ConditionController.Money.ToString();
+//x		ScoreText.text = ConditionController.Score.ToString();
 	}
 }
