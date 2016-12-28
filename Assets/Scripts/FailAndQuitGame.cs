@@ -36,6 +36,7 @@ public class FailAndQuitGame : MonoBehaviour
 	{
 
 	}
+
 	void OnCollisionEnter(Collision other)
 	{
 		if (other.gameObject.tag == "Cars") {
@@ -73,5 +74,11 @@ public class FailAndQuitGame : MonoBehaviour
 		}
 		GUI.DragWindow (); 
 	}
-
+	void OnTriggerExit(Collider other)
+	{
+		if (other.gameObject.name == "Plane") {
+			windowSwitch = 1;
+			alpha = 0;
+		}
+	}
 }
