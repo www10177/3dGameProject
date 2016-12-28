@@ -1,9 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
-public class PhoneController : MonoBehaviour {
+public class PhoneUIController : MonoBehaviour {
 	public Canvas CanvasObject;
 	public static bool PhoneObtained=false;
+	Transform PanelUI;
+	Text MoneyText;
+	Text ScoreText;
 	void Start () {
 		CanvasObject.GetComponent<Canvas> ().enabled = false;
 	}
@@ -16,12 +20,8 @@ public class PhoneController : MonoBehaviour {
 				CanvasObject.GetComponent<Canvas> ().enabled = true;
 			}
 		}
-	}
-	void OnTriggerEnter(Collider collision){
-		if (collision.gameObject.tag == "Cellphone") {
-			PhoneObtained = true;
-			Destroy (collision.gameObject);
-			CanvasObject.GetComponent<Canvas> ().enabled = true;
-		}
+
+		MoneyText.text = ConditionController.Money.ToString();
+		ScoreText.text = ConditionController.Score.ToString();
 	}
 }
