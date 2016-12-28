@@ -38,7 +38,7 @@ public class EscAndQuitGame : MonoBehaviour
 	void Update ()
 	{
 		if (Input.GetKeyDown ("escape")) {
-			Time.timeScale = 0;
+			//Time.timeScale = 0;
 			windowSwitch = 1;
 			alpha = 0; // Init Window Alpha Color
 		}
@@ -58,15 +58,15 @@ public class EscAndQuitGame : MonoBehaviour
 
 		if (GUI.Button (new Rect (80, 110, 100, 20), "Quit")) {
 			Application.Quit ();
-			Time.timeScale = 1;
+			//Time.timeScale = 1;
 		} 
 		if (GUI.Button (new Rect (220, 90, 100, 20), "Restart")) {
 			Application.LoadLevel ("MainScene");
-			Time.timeScale = 1;
+			//Time.timeScale = 1;
 		} 
 		if (GUI.Button (new Rect (220, 130, 100, 20), "Cancel")) {
 			windowSwitch = 0; 
-			Time.timeScale = 1;
+			//Time.timeScale = 1;
 		} 
 
 		GUI.DragWindow (); 
