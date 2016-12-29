@@ -37,7 +37,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         {
             if (!m_Jump)
             {
-                ; // Disable Jump
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
             }
         }
@@ -49,11 +48,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             // read inputs
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             float v = CrossPlatformInputManager.GetAxis("Vertical");
-            bool crouch = false; // Input.GetKey(KeyCode.C);// Disable Crouch
+            bool crouch = Input.GetKey(KeyCode.C);
 
             // calculate move direction to pass to character
-            bool CameraRelative = true;  //  Camera Relative Move
-            if (CameraRelative)
+            if (m_Cam != null)
             {
                 // calculate camera relative direction to move:
                 m_CamForward = Vector3.Scale(m_Cam.forward, new Vector3(1, 0, 1)).normalized;

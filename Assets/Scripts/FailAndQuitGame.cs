@@ -40,6 +40,10 @@ public class FailAndQuitGame : MonoBehaviour
 	void OnCollisionEnter(Collision other)
 	{
 		if (other.gameObject.tag == "Cars") {
+			Vector3 pos = other.gameObject.transform.position;
+			Vector3 force = 10*(pos - transform.position + new Vector3(0,100,0)) ;
+			transform.Translate (new Vector3 (0, 3.4f, 0));
+			GetComponent<Rigidbody> ().AddForce ( force);
 			windowSwitch = 1;
 			alpha = 0;
 		}
