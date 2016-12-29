@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SpawnCars : MonoBehaviour {
     /*Parameters*/
-	private int[] TimeRange =  { 1666,2500 }; // Spawn new car between TIMERANGE(ms)
+	private int[] TimeRange =  { 2500,3500 }; // Spawn new car between TIMERANGE(ms)
     public int CarCount = 3;
 	private
 
