@@ -3,14 +3,16 @@ using System.Collections;
 
 public class SpawnCars : MonoBehaviour {
     /*Parameters*/
-    private int[] TimeRange =  { 100,150 };
+	private int[] TimeRange =  { 1666,2500 }; // Spawn new car between TIMERANGE(ms)
     public int CarCount = 3;
+	private
 
 /*Global Variables*/
 
     int CarSpawnTime ;// Every "CarSpawnTime" frame will spawn one car
 	public GameObject[] Cars;
     public float MaximumDistance; // Maximum Distance that car spawned can move
+	private float Timer;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +26,7 @@ public class SpawnCars : MonoBehaviour {
         {
             Cars[i] = Resources.Load("Cars/Car" + (i + 1)) as GameObject;   
         }
+		Timer = Time.time + CarSpawnTime / 1000;
        
     }
 
@@ -31,9 +34,10 @@ public class SpawnCars : MonoBehaviour {
     void Update()
     {
 		
-        if (Time.frameCount % CarSpawnTime == 1)
+        if (Time.time > Timer)
         {
             CreateCar();
+			Timer = Time.time + CarSpawnTime / 1000;
         }
     }
 	void  CreateCar()
