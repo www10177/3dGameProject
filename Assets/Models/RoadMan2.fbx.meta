@@ -454,7 +454,7 @@ ModelImporter:
     13700000: group15_pasted__pPipe1
   materials:
     importMaterials: 1
-    materialName: 0
+    materialName: 2
     materialSearch: 1
   animations:
     legacyGenerateAnimations: 4
