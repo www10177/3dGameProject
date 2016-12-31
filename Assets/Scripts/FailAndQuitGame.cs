@@ -58,7 +58,8 @@ public class FailAndQuitGame : MonoBehaviour
 
 	void QuitWindow (int windowID)
 	{
-		GUI.Label (new Rect (100, 40, 300, 30), "Oh! GGWP! Now to quit game.");
+        UnityEngine.Cursor.visible = true;
+        GUI.Label (new Rect (100, 40, 300, 30), "Oh! GGWP! Now to quit game.");
 		for (int i = 0; i < NowQQCount; i++) {
 			GUI.Label (new Rect (30 + i * 20, 100, 20, 20), "QQ");
 		}

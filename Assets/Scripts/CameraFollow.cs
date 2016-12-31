@@ -13,6 +13,7 @@ public class CameraFollow : MonoBehaviour {
 		ToolMan = GameObject.FindWithTag ("Player").transform;
 		MainCamera = Camera.main.transform;
         offset = new Vector3(0, CameraYOffset, CameraDistance);
+        UnityEngine.Cursor.visible = false;
      //   Debug.Log("Start: " + offset);
     }
 	

@@ -54,7 +54,8 @@ public class EscAndQuitGame : MonoBehaviour
 
 	void QuitWindow (int windowID)
 	{
-		GUI.Label (new Rect (100, 50, 300, 30), "Are you sure you want to quit game ?");
+        UnityEngine.Cursor.visible = true;
+        GUI.Label (new Rect (100, 50, 300, 30), "Are you sure you want to quit game ?");
 
 		if (GUI.Button (new Rect (80, 110, 100, 20), "Quit")) {
 			Application.Quit ();
