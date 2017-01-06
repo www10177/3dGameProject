@@ -40,6 +40,7 @@ public class FailAndQuitGame : MonoBehaviour
 	void OnCollisionEnter(Collision other)
 	{
 		if (other.gameObject.tag == "Cars") {
+            GetComponent<AudioSource>().Play();
 			Vector3 pos = other.gameObject.transform.position;
 			Vector3 force = 10*(pos - transform.position + new Vector3(0,100,0)) ;
 			transform.Translate (new Vector3 (0, 3.4f, 0));

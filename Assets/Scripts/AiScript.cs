@@ -17,8 +17,7 @@ public class AiScript : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		
-		Debug.Log (startTime);
+	
 		startTime += Time.deltaTime;
 		if (startTime >= walkTime) {
 			startTime -= walkTime;

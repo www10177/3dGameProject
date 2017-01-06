@@ -13,11 +13,11 @@ public class CameraMoveInStartScene : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         float x = transform.position.x;
-
+  
         if (x >= Bound[1])
-            ToLeft = false;
-        else if (x <= Bound[0])
             ToLeft = true;
+        else if (x <= Bound[0])
+            ToLeft = false;
         if(ToLeft)
             transform.Translate(new Vector3(-1 * speed * Time.deltaTime, 0, 0));
         else
