@@ -27,7 +27,7 @@ public class ConditionController : MonoBehaviour {
 			Destroy (collider.gameObject);
 			PhoneUIController.PhoneObtained = true;
 		}
-		if (collider.name == "TaskTwoStall" && UseTask.isTask2Start && !UseTask.isTask2Finished)
-			UseTask.isTask2Finished = true;
+		if (collider.name == "TaskTwoStall" && UseTask.MissionState==2)
+			UseTask.TaskState= true;
 	}
 }
