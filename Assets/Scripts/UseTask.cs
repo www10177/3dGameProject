@@ -5,7 +5,8 @@ using UnityEngine;
 /// 使用範例
 public class UseTask : MonoBehaviour
 {
-
+	public static bool isTask2Finished = false;
+	public static bool isTask2Start = false;
 	IEnumerator TaskOne()
 	{
 
@@ -26,7 +27,11 @@ public class UseTask : MonoBehaviour
 	bool CheckTaskOneFinished()
 	{
 		if (PhoneUIController.PhoneObtained) {
-			return true;
+			if (Input.GetKeyDown (KeyCode.C)) {
+				return true;
+			} else {
+				return false;
+			}
 		} else
 			return false;
 	}
@@ -37,10 +42,12 @@ public class UseTask : MonoBehaviour
 		while (true)
 		{
 			/*TaskTwo要執行的內容*/
-			Debug.Log ("Finding w_lt");
+			isTask2Start = true;
+			Debug.Log ("Finding SaltyCrispChickenStall");
 			if (CheckTaskTwoFinished ()) 
 			{
-				Debug.Log ("w_lt is a polar bear");
+				Debug.Log ("Finished task 2");
+				isTask2Finished = true;
 				break;
 			}
 			yield return null;
@@ -50,7 +57,7 @@ public class UseTask : MonoBehaviour
 
 	bool CheckTaskTwoFinished()
 	{
-		if(Time.time >3)
+		if(isTask2Finished)
 		{
 			return true;
 		}
