@@ -20,10 +20,10 @@ public class PhoneUIController : MonoBehaviour {
 
 	void Update () {
 		if (UseTask.MissionState==2) {
-			TaskText.text = "Task2:Find Fried Chicken Stall";
+			TaskText.text = "Task2:找到鹹酥雞攤";
 		} 
 		if (UseTask.TaskState){
-			TaskText.text = "Mission Complete";
+			TaskText.text = "任務完成！";
 			Counter_f += Time.deltaTime;
 			Counter_i = (int)Counter_f;
 			if (Counter_i > 3) {
