@@ -71,6 +71,37 @@ public class UseTask : MonoBehaviour
 			return false;
 		}
 	}
+
+	IEnumerator TaskThree()
+	{
+
+		while (true)
+		{
+			/*TaskThree要執行的內容:獲得20塊*/
+			MissionState = 3;
+			//PhoneUIController.TaskText.text = "Finding Fried Chicken Stall";
+			if (CheckTaskThreeFinished ()) 
+			{
+				TaskState= true;
+				MissionState = 0;
+				break;
+			}
+			yield return null;
+		}
+
+	}
+
+	bool CheckTaskThreeFinished()
+	{
+		if(TaskState)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
 /*	IEnumerator TaskOne()
 	{
 		while(true)
@@ -104,21 +135,40 @@ public class UseTask : MonoBehaviour
 		///
 	}
 */
-
+	/*MyTask task;
+	MyTask NewTask;
+	int MissionCase=0;*/
 	void Start()
 	{
+		//task = new MyTask(TaskOne());
+		InvokeRepeating ("LaunchTask", 1.0f,1.0f);
 		MyTask task = new MyTask(TaskOne());
-		MyTask task2;
-
+		MyTask NewTask2;
 		//用匿名的方式添加TaskOne finished後的處理
-		task.Finished += delegate(bool value)
-		{
-			if(value)
-			{
-				task2 =  new MyTask (TaskTwo (), true);
+		task.Finished += delegate(bool value) {
+			if (value && !TaskState) {
+				//MissionCase=Random.Range(2,4);
+				//print(MissionCase); 
+				NewTask2 = new MyTask (TaskTwo (), true);
 			}
 		};
-
 	}
-
+	/*void LaunchTask(){
+		print ("HI");
+		task.Finished += delegate(bool value) {
+			print("HIEEE");
+			if (value && !TaskState) {
+				MissionCase = Random.Range (2, 4);
+				print (MissionCase);
+				switch (MissionCase) {
+				case 2: 
+					NewTask = new MyTask (TaskTwo (), true);
+					break;
+				case 3:
+					NewTask = new MyTask (TaskThree (), true);
+					break;
+				}
+			}
+		};
+	}*/
 }
