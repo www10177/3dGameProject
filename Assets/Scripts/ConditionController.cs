@@ -29,5 +29,7 @@ public class ConditionController : MonoBehaviour {
 		}
 		if (collider.name == "TaskTwoStall" && UseTask.MissionState==2)
 			UseTask.TaskState= true;
+		if (Money >= 50 && UseTask.MissionState == 3)
+			UseTask.TaskState = true;
 	}
 }
