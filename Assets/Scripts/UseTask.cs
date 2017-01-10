@@ -51,7 +51,7 @@ public class UseTask : MonoBehaviour
 			if (CheckTaskTwoFinished ()) 
 			{
 				Debug.Log ("Finished task 2");
-				TaskState= true;
+				TaskState= false;	//false:直接接task3 //true:顯示任務完成，但沒有task3觸發
 				MissionState = 0;
 				break;
 			}
@@ -79,6 +79,7 @@ public class UseTask : MonoBehaviour
 		{
 			/*TaskThree要執行的內容:獲得20塊*/
 			MissionState = 3;
+			Debug.Log ("start task3");
 			//PhoneUIController.TaskText.text = "Finding Fried Chicken Stall";
 			if (CheckTaskThreeFinished ()) 
 			{
@@ -102,54 +103,33 @@ public class UseTask : MonoBehaviour
 			return false;
 		}
 	}
-/*	IEnumerator TaskOne()
-	{
-		while(true)
-		{
-			Debug.Log("TaskOne running");
-			if(CheckTaskOneFinished())
-			{
-				Debug.Log("TaskOne Finished");
-				DealWithTaskOneFinished();
-				break; //跳出後執行e.moveNext()，接著狀態變成finished
-			}
-			yield return null;
-		}
-	}
 
-	/// 用来檢測任務是否完成
-	bool CheckTaskOneFinished()
-	{
-		if(Time.time >3)
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
-	}
-
-	void DealWithTaskOneFinished()
-	{
-		///
-	}
-*/
 	/*MyTask task;
 	MyTask NewTask;
 	int MissionCase=0;*/
 	void Start()
 	{
 		//task = new MyTask(TaskOne());
-		InvokeRepeating ("LaunchTask", 1.0f,1.0f);
+		InvokeRepeating("LaunchTask", 1.0f,1.0f);
 		MyTask task = new MyTask(TaskOne());
-		MyTask NewTask2;
+		MyTask task2;
+		MyTask task3;
 		//用匿名的方式添加TaskOne finished後的處理
 		task.Finished += delegate(bool value) {
 			if (value && !TaskState) {
 				//MissionCase=Random.Range(2,4);
 				//print(MissionCase); 
-				NewTask2 = new MyTask (TaskTwo (), true);
+				task2 = new MyTask (TaskTwo (), true);
+				task2.Finished += delegate(bool value2) {
+					if (value2 && !TaskState) {
+						task3 = new MyTask (TaskThree(), true);
+						task3.Finished += delegate(bool value3) {
+							if (value3 && !TaskState) {
+								Debug.Log ("all finished");
+							}
+						};
+					}
+				};
 			}
 		};
 	}
