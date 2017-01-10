@@ -36,9 +36,15 @@ public class FailAndQuitGame : MonoBehaviour
 	{
 
 	}
+
 	void OnCollisionEnter(Collision other)
 	{
 		if (other.gameObject.tag == "Cars") {
+            GetComponent<AudioSource>().Play();
+			Vector3 pos = other.gameObject.transform.position;
+			Vector3 force = 10*(pos - transform.position + new Vector3(0,100,0)) ;
+			transform.Translate (new Vector3 (0, 3.4f, 0));
+			GetComponent<Rigidbody> ().AddForce ( force);
 			windowSwitch = 1;
 			alpha = 0;
 		}
@@ -53,25 +59,32 @@ public class FailAndQuitGame : MonoBehaviour
 
 	void QuitWindow (int windowID)
 	{
-		GUI.Label (new Rect (100, 40, 300, 30), "Oh! GGWP! Now to quit game.");
+        UnityEngine.Cursor.visible = true;
+        GUI.Label (new Rect (100, 40, 300, 30), "Oh! GGWP! Now to quit game.");
 		for (int i = 0; i < NowQQCount; i++) {
 			GUI.Label (new Rect (30 + i * 20, 100, 20, 20), "QQ");
 		}
 		if (GUI.Button (new Rect (80, 70, 100, 20), "Quit")) {
 			Application.Quit ();
-			Time.timeScale = 1;
+			//Time.timeScale = 1;
 		}
 		if (GUI.Button (new Rect (220, 70, 100, 20), "Restart")) {
 			Application.LoadLevel ("MainScene");
-			Time.timeScale = 1;
+			//Time.timeScale = 1;
 		} 
 		if (GUI.Button (new Rect (220, 90, 100, 20), "help QQ")) {
-			Time.timeScale = 1;
+			//Time.timeScale = 1;
 			if (NowQQCount < MaxQQCount) {
 				NowQQCount++; 
 			}
 		}
 		GUI.DragWindow (); 
 	}
-
+	void OnTriggerExit(Collider other)
+	{
+		if (other.gameObject.name == "Plane") {
+			windowSwitch = 1;
+			alpha = 0;
+		}
+	}
 }

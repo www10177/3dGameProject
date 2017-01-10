@@ -38,8 +38,8 @@ public class CompleteAndQuitGame : MonoBehaviour
 	void OnTriggerEnter(Collider other) 
 	{
 		print ("trigger on "+other.gameObject.name);
-		if (other.gameObject.name == "Goal") {	
-			Time.timeScale = 0;
+		if (other.gameObject.name == "EndBuilding") {	
+			//Time.timeScale = 0;
 			windowSwitch = 1;
 			alpha = 0;
 		}
@@ -58,11 +58,11 @@ public class CompleteAndQuitGame : MonoBehaviour
 
 		if (GUI.Button (new Rect (80, 90, 100, 20), "Quit")) {
 			Application.Quit ();
-			Time.timeScale = 1;
+			//Time.timeScale = 1;
 		} 
 		if (GUI.Button (new Rect (220, 90, 100, 20), "Restart")) {
 			Application.LoadLevel ("MainScene");
-			Time.timeScale = 1;
+			//Time.timeScale = 1;
 		} 
 		GUI.DragWindow (); 
 	}
