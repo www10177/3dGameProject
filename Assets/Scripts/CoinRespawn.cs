@@ -9,36 +9,19 @@ public class CoinRespawn : MonoBehaviour {//純測試，希望拿來開發讓金
 	// Use this for initialization
 	void Start () {
 		plane = GameObject.Find ("Plane");
+		Size = plane.transform.GetComponent<Renderer> ().bounds.size;
 	}
 	float Counter_f = 0;
 	// Update is called once per frame
 	void Update () {
 		Counter_f += Time.deltaTime;
-		Size= plane.transform.GetComponent<Renderer>().bounds.size;
 		if (Counter_f > 120f) {
 			x = Random.Range (-0.5f * Size.x, 0.5f * Size.x);
 			y = 1f;
 			z = Random.Range (-0.5f * Size.z, 0.5f * Size.z);
-
-			this.transform.position = new Vector3 (x + transform.position.x, y, z + transform.position.z);
+			this.transform.position = new Vector3 (x + plane.transform.position.x, y, z + plane.transform.position.z);
+			Counter_f = 0f;
 		}
 	}
-	/*void OnCollisionStay(Collision other)
-	{
-		if (other.gameObject.layer == 8) {
-			print ("Coin stay in "+other.gameObject.name);
-			GetComponent<Collider> ().isTrigger = false;
-			Destroy (GetComponent<Rigidbody>());
-		}
 
-	}
-	void OnCollisionExit(Collision other)
-	{
-		if (other.gameObject.layer == 8) {
-			print ("Coin Exit "+other.gameObject.name);
-			GetComponent<Collider> ().isTrigger = true;
-			Destroy (GetComponent<Rigidbody>());
-		}
-	}*/
-	//void 
 }
