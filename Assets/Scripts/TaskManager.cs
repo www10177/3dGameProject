@@ -23,13 +23,15 @@ public class TaskManager : MonoBehaviour {
 
 	}
 	void TaskAllocation(){
+		//print ("TaskAllocating...");
 		if (ConditionController.Score < 100)
 			Level = 1;
-		else if (ConditionController.Score >= 100 && ConditionController.Score < 500)
+		else if (ConditionController.Score >= 100 /*&& ConditionController.Score < 500*/)
 			Level = 2;
-		else if (ConditionController.Score >= 500 && ConditionController.Score < 1000)
-			Level = 3;
-		print ("Last Task:" + LastMission);
+		//else if (ConditionController.Score >= 500 && ConditionController.Score < 1000)
+			//Level = 3;
+		//print ("Last Task:" + LastMission);
+		//print(!TaskState+ " "+MissionState);
 		if (!TaskState && MissionState == 0) {
 			do {
 				switch (Level) {
@@ -43,7 +45,7 @@ public class TaskManager : MonoBehaviour {
 					MissionCase = Random.Range (2, 13);
 					break;
 				}
-				print ("Task"+MissionCase);
+				//print ("Task"+MissionCase);
 			} while(MissionCase == LastMission);
 
 			MissionState = MissionCase;
@@ -51,9 +53,15 @@ public class TaskManager : MonoBehaviour {
 				MRate = 0;
 				MCase = 10;
 			}
-			if (MissionState == 5) {
+			if (MissionState == 5||MissionState==8) {
 				MRate = 0;
 				MCase = 2;
+			}
+			if (MissionState == 7) {
+				MRate = 0;
+				MCase = 5;
+				Ncoutner = 60;
+				Dcounter = 60;
 			}
 		}
 	}
@@ -65,4 +73,5 @@ public class TaskManager : MonoBehaviour {
  *4:認識正妹
  *5:雞排
  *6:撞十路人
+ *7:一分鐘五金幣
 */

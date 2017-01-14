@@ -64,10 +64,8 @@ public class PauseGUI : MonoBehaviour
 			//Time.timeScale = 1;
 		} 
 		if (GUI.Button (new Rect (220, 90, 100, 20), "Restart")) {
-			ConditionController.Money = 0;
 			windowSwitch = 0;
-			UnityEngine.Cursor.visible = false;
-			PhoneUIController.PhoneObtained = false;
+			RestartReset ();
 			Application.LoadLevel ("MainScene");
 			//Time.timeScale = 1;
 		} 
@@ -91,8 +89,8 @@ public class PauseGUI : MonoBehaviour
 			//Time.timeScale = 1;
 		}
 		if (GUI.Button (new Rect (220, 70, 100, 20), "Restart")) {
-			ConditionController.Money = 0;
-			PhoneUIController.PhoneObtained = false;
+			ConditionController.Score = ConditionController.Score / 2;
+			RestartReset ();
 			windowSwitch = 0;
 			Application.LoadLevel ("MainScene");
 			//Time.timeScale = 1;
@@ -104,5 +102,13 @@ public class PauseGUI : MonoBehaviour
 			}
 		}
 		GUI.DragWindow (); 
+	}
+	void RestartReset(){
+		ConditionController.Money = 0;
+		TaskManager.LastMission = 0;
+		TaskManager.MissionState = 0;
+		TaskManager.TaskState=false;
+		PhoneUIController.PhoneObtained = false;
+		UnityEngine.Cursor.visible = false;
 	}
 }
